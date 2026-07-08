@@ -1,10 +1,7 @@
 //your JS code here. If required.
-const input = document.getElementById("ip");
-const button = document.getElementById("btn");
-const output = document.getElementById("output");
-
-button.onClick = function (){
-	const num = Number(input.value);
+document.getElementById("btn").addEventListener("click", function () {
+	const num = Number(document.getElementById("ip").value);
+    const output = document.getElementById("output");
 
 	new Promise((resolve) => {
 		setTimeout(() => {
@@ -43,7 +40,7 @@ button.onClick = function (){
 		return new Promise((resolve) => {
 			setTimeout(() => {
 				value = value + 10;
-				output.textContent = `Result: ${value}`;
+				output.textContent = `Final Result: ${value}`;
 				resolve(value);
 			}, 1000);
 		})
